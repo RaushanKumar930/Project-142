@@ -67,7 +67,7 @@ def popular_articles():
         popular_article_data.append(p)
 
     return jsonify({
-        "data": popular_article_data,
+        "data": popular_article_data[0:20],
         "status": "success"
     })
 
@@ -97,7 +97,7 @@ def recommended_articles():
         recommended_article_data.append(p)
 
     return jsonify({
-        "data":recommended_article_data,
+        "data":recommended_article_data[0:10],
         "status": "success"
     })
 
